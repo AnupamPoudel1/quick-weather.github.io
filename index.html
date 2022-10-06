@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title of the web page -->
+    <title>Quick-Weather</title>
+    <!-- link for custom css -->
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <!-- link for google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrapper">
+        <header><ion-icon name="arrow-back-outline"></ion-icon>Quick-Weather</header>
+
+        <!-- location input section -->
+        <section class="input-part">
+            <p class="text-part">  </p>
+            <input type="text" placeholder="Enter a city name" spellcheck="false" required>
+            <div class="seperator"></div>
+            <button>Get Device Location</button>
+        </section>
+
+        <!-- weather details section -->
+        <section class="weather-part">
+            <img src="#" alt="weather logo" width="150">
+            <div class="temperature">
+                <span class="numb">_</span>
+                <span class="deg">°</span>C
+            </div>
+            <div class="weather">_</div>
+            <div class="location">
+                <ion-icon name="location-outline"></ion-icon>
+                <span>_</span>
+            </div>
+
+            <!-- more details about the weatehr -->
+
+            <div class="seperator-2"></div>
+            
+            <div class="more-details">
+                <!-- feels like section -->
+                <div class="column feels">
+                    <ion-icon name="thermometer-outline"></ion-icon>
+                    <div class="details">
+                        <p>Feels like</p>
+                        <div class="temp">
+                            <span class="numb">_</span>
+                            <span class="deg">°</span>C
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vertical-seperator"></div>
+
+                <!-- humidity section -->
+                <div class="column humidity">
+                    <ion-icon name="water-outline"></ion-icon>
+                    <div class="details">
+                        <p>Humidity</p>
+                        <span class="numb">_</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- link for ion-icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- link for custom js -->
+    <script src="./Assets/js/script.js"></script>
+</body>
+</html>

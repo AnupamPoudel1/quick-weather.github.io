@@ -1,0 +1,213 @@
+:root{
+    /* font-family */
+    --ff-poppins: 'poppins', sans-serif;
+
+    /* font-size */
+    --ff-0: 62px;
+    --ff-1: 24px;
+    --ff-2: 18px;
+    --ff-3: 17px;
+    --ff-4: 16px;
+    --ff-5: 15px;
+    --ff-6: 14px;
+    --ff-7: 13px;
+    --ff-8: 11px;
+}
+
+/*
+    initial css
+*/
+
+*, *::before, *::after{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-family: var(--ff-poppins);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(24, 24, 24);
+}
+
+
+/* main-content styling */
+
+.wrapper{
+    border: 1px solid aliceblue;
+    border-radius: 20px;
+    width: 400px;
+    background: rgb(73, 69, 69);
+    padding: 20px 30px 10px;
+    text-align: center;
+}
+
+.wrapper header{
+    font-family: inherit;
+    font-size: var(--ff-1);
+    font-weight: 600;
+    color: antiquewhite;
+    text-align: left;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+header ion-icon{
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+ion-icon:hover{
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+
+.wrapper .text-part{
+    display: none;
+    color: aliceblue;
+    font-size: var(--ff-2);
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.text-part.error{
+    display: block;
+    background: #FF9494;
+}
+.text-part.pending{
+    display: block;
+    background: rgb(49, 45, 45);
+}
+
+.input-part :where(input, button){
+    font-size: var(--ff-3);
+    font-weight: 500;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.input-part input:is(:valid){
+    border: 2px solid rgb(24, 24, 24);
+}
+
+.input-part button{
+    color: rgb(24, 24, 24);
+    background: antiquewhite;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.input-part input{
+    background-color: aliceblue;
+    color: rgb(24, 24, 24);
+}
+
+.seperator{
+    height: 0.5px;
+    width: 100%;
+    margin: 25px 0px;
+    background: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seperator::before{
+    content: "OR";
+    color: aliceblue;
+    background: rgb(73, 69, 69);
+    padding: 0px 10px;
+}
+
+.seperator-2{
+    height: 0.5px;
+    width: 100%;
+    margin: 25px 0px;
+    background: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+    weather part css 
+*/
+
+.weather-part img{
+    margin-top: 20px;
+}
+
+.weather-part .temperature{
+    font-size: var(--ff-0);
+    margin-bottom: 10px;
+    color: antiquewhite;
+}
+
+.more-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0px;
+}
+
+ion-icon{
+    color: antiquewhite;
+    font-size: 30px;
+}
+
+.column, .details{
+    color: aliceblue;
+}
+
+.vertical-seperator{
+    content: "";
+    height: 80px;
+    width: 1px;
+    background: antiquewhite;
+    font-weight: 600;
+}
+
+.deg{
+    font-weight: 200;
+}
+
+.weather,.location{
+    color: aliceblue;
+    font-size: var(--ff-2);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+
+/* disply setttings css */
+
+.weather-part{
+    display: none;
+}
+
+.wrapper.active .input-part{
+    display: none;
+}
+
+.wrapper.active .weather-part{
+    display: block;
+}
+
+.wrapper.active header ion-icon{
+    display: flex;
+}
